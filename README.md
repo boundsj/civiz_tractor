@@ -4,7 +4,11 @@ Real time tweet vizualation for several major urban areas. It is a bit contrived
 
 Installation Instructions
 -------------------------
-These instructions assume that you have got git (and GitHub), Python (2.6 or 2.7), [virtualenvwrapper](http://www.doughellmann.com/projects/virtualenvwrapper/), [Redis](http://redis.io/), [NPM](http://npmjs.org/), and [Node](http://nodejs.org/) installed. Install them on your development environment if you have not done so already before continuing.
+These instructions assume that you have got git (and GitHub), Python, [virtualenvwrapper](http://www.doughellmann.com/projects/virtualenvwrapper/), [Redis](http://redis.io/), [NPM](http://npmjs.org/), and [Node](http://nodejs.org/) installed. Install them on your development environment if you have not done so already before continuing.
+
+For reference, this applications works and was tested with the following software versions:
+Python 2.7
+:
 
 For hosting on Heroku (described later), please check the Heroku website for instructions related to setting up an account and installing the development tools on your machine.
 
@@ -18,21 +22,17 @@ Civiz uses the tweetstreamwrapper submodule to handle pushing tweets from the py
     $ git submodule init
     $ git submodule update
 
-Now set up the node app by installing it's required packages with npm. There is a packages.json file so you only need to run npm install:
-
-    $ cd node
-    $ npm install 
-
 TODO: set up environment variables in .env file TWITTER USER & PASS, REDIS
-TODO: note that node's env variables are in development-settings.json, probably don't need to be touched
 
 Running Locally
 ---------------
 
 
-
 Deploy to Heroku
 ----------------
+heroku create -s cedar YOUR_APP_NAME
 heroku addons:add redistogo:nano
 heroku plugins:install git://github.com/ddollar/heroku-config.git
-heroku create YOUR_APP_NAME -s cedar
+heroku config:add TWITTER_USER=YOUR_TWITTER_USER_NAME
+heroku config:add TWITTER_PASSWORD=YOUR_TWITTER_USER_NAME
+
