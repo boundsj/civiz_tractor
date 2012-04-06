@@ -19,6 +19,7 @@ This application uses the tweetstreamwrapper submodule to handle pushing tweets 
     $ git submodule update
 
 Environment variables are used to store twitter and redis connection details. To make env variables available for your local testing, create a file called .env and add the following lines:
+
     $ TWITTER_USER=your_twitter_id
     $ TWITTER_PASSWORD=your_twitter_password
     $ REDISTOGO_URL=redis://localhost:6379
