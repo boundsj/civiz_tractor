@@ -1,6 +1,6 @@
 What is this?
 -------------
-This is a python application that uses [tweetstreamwrapper](https://github.com/boundsj/tweetstreamwrapper) to capture geobounded tweets and push them to a [redis pub/sub](http://redis.io/topics/pubsub). From there, they can be picked up and used by any application that can subscribe to the redis pub/sub instance (i.e. [civis_server](https://github.com/boundsj/civiz_server)). 
+This is a python application that uses [tweetstreamwrapper](https://github.com/boundsj/tweetstreamwrapper) to capture geobounded tweets and push them to a [redis pub/sub](http://redis.io/topics/pubsub). From there, they can be picked up and used by any application that can subscribe to the redis pub/sub instance (i.e. [civiz_server](https://github.com/boundsj/civiz_server)). 
 
 Installation Instructions
 -------------------------
